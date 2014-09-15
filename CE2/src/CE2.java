@@ -390,7 +390,7 @@ public class CE2
 		
 		String retString = MSG_NOTFOUND_STRING;
 		
-		if(checkString.isEmpty() || checkString == null || datas == null || datas.isEmpty() )
+		if(checkString == null || checkString.isEmpty() ||  datas == null || datas.isEmpty() )
 		{
 			return MSG_EMPTY_STRING;
 		}

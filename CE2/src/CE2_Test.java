@@ -12,9 +12,9 @@ public class CE2_Test {
 		
 		List<String> datas = null;
 		
-		testCheckContains("checkContains","\"CE2\" not found","CE2",datas);
+		testCheckContains("checkContains","Input string is empty","", datas);
 		
-		//testCheckContains("checkContains","Input string is empty","");
+		//testCheckContains("checkContains","\"CE2\" not found","CE2",datas);
 		//testCheckContains("checkContains","\"test2\" word found","test2");
 		
 	}
