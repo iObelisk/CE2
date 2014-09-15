@@ -40,6 +40,9 @@ public class CE2_Test {
 		sortList.add("g");
 		sortList.add("a");
 		testSortContents("TestSortContains","Display List is sorted", sortList);			
+		
+		//Simple assert to check if list is sorted
+		assertEquals("checkSortedList", "[a,d,e,f,g]",sortList.toString());
 	}
 
 	public void testCheckContains(String description, String expected, 
@@ -54,8 +57,6 @@ public class CE2_Test {
 		assertEquals(description, expected,CE2.sortContents(datas));		
 	}
 	
-	
-
 	
 	
 }
