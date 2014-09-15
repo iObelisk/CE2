@@ -47,7 +47,6 @@
  */
 
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 import java.io.File;
@@ -203,15 +202,14 @@ public class CE2
 					}
 					else
 					{
-						checkContains("",getFileData());				
+						System.out.println(checkContains("",getFileData()));				
 					}
 					
 					break;
 				
 				case CMD_SORT:
-					//List<String> datas = new LinkedList<String>();
 					
-					sortContents(getFileData());
+					System.out.println(sortContents(getFileData()));
 					break;	
 					
 				default:					
@@ -420,17 +418,26 @@ public class CE2
 		return "\"" + checkString + "\"" + " " + retString;
 	}
 	
-	public static String sortContents(List<String> sortList){
+	public static String sortContents(List<String> originalList) throws IOException{
 	
 		String returnMSG = MSG_LIST_EMPTY;
 		
-		if(sortList == null || sortList.isEmpty())
+		if(originalList == null || originalList.isEmpty())
 		{
 			return returnMSG;
 		}
 		
-		Collections.sort(sortList);
+		//If the buffer is not null or empty, push into the storage
+		if(fileWriter != null){
+			writeToFile();
+		}
+			
+		List<String> sortedList = originalList;
+		Collections.sort(sortedList);
 		returnMSG = MSG_LIST_SORTED;
+		
+		//Writes the newly sorted list into file
+		writeNewDatas(sortedList);
 		
 		return returnMSG;
 	}
