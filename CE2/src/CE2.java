@@ -70,6 +70,7 @@ public class CE2
 	
 	private static final String MSG_EMPTY_FILE = "%s is empty";	
 	private static final String MSG_NO_CMD = "No such command \"%s\" " ;
+	private static final String MSG_EMPTY_STRING = "Input string is empty";
 	
 	/*Declarations of Class Objects */
 	private static File file;
@@ -373,6 +374,10 @@ public class CE2
 		
 		String retString = "not found";
 		
+		if(checkString.isEmpty())
+		{
+			return MSG_EMPTY_STRING;
+		}
 		//List<String> datas = getFileData();
 		
 		/*

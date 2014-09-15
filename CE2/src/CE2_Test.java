@@ -12,7 +12,7 @@ public class CE2_Test {
 		//testAddCmd("add test", "added to null: \"i love dao suan\"" , "i love dao suan");
 		
 		testCheckContains("checkContains","test not found","test");
-		testCheckContains("checkContains","null string entered","");
+		testCheckContains("checkContains","Input string is empty","");
 		
 	}
 
