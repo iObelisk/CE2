@@ -395,6 +395,7 @@ public class CE2
 			return MSG_EMPTY_STRING;
 		}
 		
+		writeToFile();
 		List<String> datas = getFileData();
 	
 		for(String data:datas){
