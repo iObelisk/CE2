@@ -13,7 +13,7 @@ public class CE2_Test {
 		
 		testCheckContains("checkContains","\"CE2\" not found","CE2");
 		testCheckContains("checkContains","Input string is empty","");
-		testCheckContains("checkContains","\"test2\" - word found ","test2");
+		testCheckContains("checkContains","\"test2\" word found","test2");
 		
 	}
 
