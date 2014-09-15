@@ -429,6 +429,8 @@ public class CE2
 			return returnMSG;
 		}
 		
+		returnMSG = MSG_LIST_SORTED;
+		
 		return returnMSG;
 	}
 	/**

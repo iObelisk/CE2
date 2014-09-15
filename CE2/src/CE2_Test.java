@@ -26,15 +26,20 @@ public class CE2_Test {
 		testCheckContains("checkContains","\"TestCase1\" word found","TestCase1",datas);
 
 		
-		/********** Test cases for sortContents Function *****************/
-		testSortContents("TestSortContains","Display List is empty", datas);
 		
-		datas.add("d");
-		datas.add("e");
-		datas.add("f");
-		datas.add("g");
-		datas.add("a");
-		testSortContents("TestSortContains","Display List is sorted", datas);			
+		/********** Test cases for sortContents Function *****************/
+		
+		List<String> sortList = null;
+		
+		testSortContents("TestSortContains","Display List is empty", sortList);
+		
+		sortList = new LinkedList<String>();
+		sortList.add("d");
+		sortList.add("e");
+		sortList.add("f");
+		sortList.add("g");
+		sortList.add("a");
+		testSortContents("TestSortContains","Display List is sorted", sortList);			
 	}
 
 	public void testCheckContains(String description, String expected, 
