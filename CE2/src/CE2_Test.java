@@ -11,7 +11,7 @@ public class CE2_Test {
 		
 		//testAddCmd("add test", "added to null: \"i love dao suan\"" , "i love dao suan");
 		
-		testCheckContains("checkContains","\"test\" not found","CE2");
+		testCheckContains("checkContains","\"CE2\" not found","CE2");
 		testCheckContains("checkContains","Input string is empty","");
 		//testCheckContains("checkContains","\"test2\" - word found ","test2");
 		
