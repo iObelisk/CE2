@@ -19,7 +19,7 @@ public class CE2_Test {
 		datas = new LinkedList<String>();
 		datas.add("TestCase1");
 		testCheckContains("checkContains","\"CE2\" not found","CE2",datas);
-		//testCheckContains("checkContains","\"test2\" word found","test2");
+		testCheckContains("checkContains","\"TestCase1\" word found","TestCase1",datas);
 		
 	}
 
