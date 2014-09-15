@@ -196,11 +196,11 @@ public class CE2
 					
 					
 					if(userInput.hasNext()){	
-						System.out.println(checkContains(userInput.next()));	
+						System.out.println(checkContains(userInput.next(),getFileData()));	
 					}
 					else
 					{
-						checkContains("");				
+						checkContains("",getFileData());				
 					}
 					
 					break;
@@ -386,17 +386,16 @@ public class CE2
 	 *
 	 * 
 	 */	
-	public static String checkContains(String checkString) throws IOException{
+	public static String checkContains(String checkString,List<String> datas) throws IOException{
 		
 		String retString = MSG_NOTFOUND_STRING;
 		
-		if(checkString.isEmpty() || checkString == null)
+		if(checkString.isEmpty() || checkString == null || datas.isEmpty() || datas == null)
 		{
 			return MSG_EMPTY_STRING;
 		}
 		
 		writeToFile();
-		List<String> datas = getFileData();
 	
 		for(String data:datas){
 			if(data.contains(checkString)){

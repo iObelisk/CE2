@@ -1,6 +1,7 @@
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.junit.Test;
 
@@ -9,15 +10,18 @@ public class CE2_Test {
 	@Test
 	public void testExecuteCommand() throws IOException{
 		
-		testCheckContains("checkContains","\"CE2\" not found","CE2");
-		testCheckContains("checkContains","Input string is empty","");
-		testCheckContains("checkContains","\"test2\" word found","test2");
+		List<String> datas = null;
+		
+		testCheckContains("checkContains","\"CE2\" not found","CE2",datas);
+		
+		//testCheckContains("checkContains","Input string is empty","");
+		//testCheckContains("checkContains","\"test2\" word found","test2");
 		
 	}
 
-	public void testCheckContains(String description, String expected, String userInput) throws IOException{
+	public void testCheckContains(String description, String expected, String userInput, List<String> datas) throws IOException{
 		
-		assertEquals(description, expected,CE2.checkContains(userInput));
+		assertEquals(description, expected,CE2.checkContains(userInput,datas));
 
 		
 	}
