@@ -68,6 +68,7 @@ public class CE2
 	private static final String CMD_DELETE = "delete";
 	private static final String CMD_CLEAR = "clear";
 	private static final String CMD_EXIT = "exit";
+	private static final String CMD_CHECK = "check";
 	
 	private static final String MSG_EMPTY_FILE = "%s is empty";	
 	private static final String MSG_NO_CMD = "No such command \"%s\" " ;
@@ -190,7 +191,19 @@ public class CE2
 				case CMD_CLEAR:
 					clearContents(true);
 					break;
-	
+					
+				case CMD_CHECK:
+					
+					
+					if(userInput.hasNext()){	
+						System.out.println(checkContains(userInput.next()));	
+					}
+					else
+					{
+						checkContains("");				
+					}
+					
+					break;
 					
 				default:					
 					if(!userCommand.equals(CMD_EXIT))
@@ -377,14 +390,13 @@ public class CE2
 		
 		String retString = MSG_NOTFOUND_STRING;
 		
-		if(checkString.isEmpty())
+		if(checkString.isEmpty() || checkString == null)
 		{
 			return MSG_EMPTY_STRING;
 		}
 		
-		LinkedList<String> datas = new LinkedList<String>(); //getFileData();
-		datas.add("my test cases are awesome test2");
-		
+		List<String> datas = getFileData();
+	
 		for(String data:datas){
 			if(data.contains(checkString)){
 				retString = MSG_FOUND_STRING;
