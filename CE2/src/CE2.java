@@ -420,15 +420,16 @@ public class CE2
 		return "\"" + checkString + "\"" + " " + retString;
 	}
 	
-	public static String sortContents(List<String>datas){
+	public static String sortContents(List<String> sortList){
 	
 		String returnMSG = MSG_LIST_EMPTY;
 		
-		if(datas == null || datas.isEmpty())
+		if(sortList == null || sortList.isEmpty())
 		{
 			return returnMSG;
 		}
 		
+		Collections.sort(sortList);
 		returnMSG = MSG_LIST_SORTED;
 		
 		return returnMSG;
