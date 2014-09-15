@@ -388,10 +388,12 @@ public class CE2
 	}
 	
 	/**
-	 * @throws IOException 
+	 * Check if word queried is within the 'add'ed contents
      *
-	 *
-	 * 
+	 * @param checkString - the string that the user input to query about
+	 * @param datas - the list of contents already 'add'ed to check upon 
+	 * 				  for the queried string
+	 * @throws IOException 
 	 */	
 	public static String checkContains(String checkString,List<String> datas) throws IOException{
 		
@@ -418,6 +420,13 @@ public class CE2
 		return "\"" + checkString + "\"" + " " + retString;
 	}
 	
+	/**
+	 * Sorts the display list that user has 'add'ed previously - alphabetically
+	 * and saves it to the storage file indicated at the start of the program
+	 * 
+	 * @param originalList - takes in the list to be sorted
+	 * @throws IOException 
+	 */	
 	public static String sortContents(List<String> originalList) throws IOException{
 	
 		String returnMSG = MSG_LIST_EMPTY;
