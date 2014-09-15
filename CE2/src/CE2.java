@@ -76,7 +76,9 @@ public class CE2
 	private static final String MSG_EMPTY_STRING = "Input string is empty";
 	private static final String MSG_FOUND_STRING = "word found";
 	private static final String MSG_NOTFOUND_STRING = "not found";
-
+	private static final String MSG_LIST_EMPTY = "Display List is empty";
+	private static final String MSG_LIST_SORTED = "Display List is sorted";
+	
 	/*Declarations of Class Objects */
 	private static File file;
 	private static String filename;
@@ -209,7 +211,7 @@ public class CE2
 				case CMD_SORT:
 					//List<String> datas = new LinkedList<String>();
 					
-					sortContents();
+					sortContents(getFileData());
 					break;	
 					
 				default:					
@@ -418,25 +420,9 @@ public class CE2
 		return "\"" + checkString + "\"" + " " + retString;
 	}
 	
-	public static void sortContents(/*List<String>datas*/){
-		List<String> datas = new LinkedList<String>();
-		datas.add("a z");
-		datas.add("a t");
-		datas.add("a b");
-		datas.add("a a");
-		
-		for(String data:datas)
-		{
-			System.out.println(data);
-		}
-		
-		Collections.sort(datas);
+	public static String sortContents(List<String>datas){
 	
-		for(String data:datas)
-		{
-			System.out.println(data);
-		}
-		
+		return null;
 	}
 	/**
     *
