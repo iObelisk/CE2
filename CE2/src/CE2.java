@@ -212,6 +212,8 @@ public class CE2
 		fileWriter.write(data.trim());
 		fileWriter.newLine();
 		System.out.println("added to " + filename + ": \"" + data.trim() +"\"");
+		
+		//return "added to " + filename + ": \"" + data.trim() +"\"";
 	}
 	
 	/**
@@ -219,7 +221,7 @@ public class CE2
 	 * 
 	 * @throws IOException - if file can't be written to for saving purpose.
 	 */
-	private static void displayContents() throws IOException 
+	public static void displayContents() throws IOException 
 	{
 		// To update & ensure that user 'add'(s) are written to file first.
 		writeToFile();
@@ -246,7 +248,7 @@ public class CE2
 	 * 
 	 * @throws IOException - if file can't be written to for saving purpose.
 	 */
-	private static void deleteContent(int id) throws IOException 
+	public static void deleteContent(int id) throws IOException 
 	{
 		// To ensure that user 'add'(s) are written to file first.
 		writeToFile(); 
@@ -281,7 +283,7 @@ public class CE2
 	 * 
 	 * @throws IOException - if file can't be close/created.
 	 */
-	private static void clearContents(boolean isUserCall) throws IOException 
+	public static void clearContents(boolean isUserCall) throws IOException 
 	{
 		fileWriter.close();
 		createNewFile();
@@ -360,4 +362,45 @@ public class CE2
 		String msg = String.format(format, args);
 		System.out.println(msg);
 	}
+	
+	/**
+	 * @throws IOException 
+     *
+	 *
+	 * 
+	 */	
+	public static String checkContains(String checkString) throws IOException{
+		
+		String retString = "not found";
+		
+		//List<String> datas = getFileData();
+		
+		/*
+		//Display current data(s) in file.
+		if(datas.isEmpty())
+		{
+			retString = "not found";
+		}
+		else
+		{
+			for (String data:datas)
+			{
+				if(data.contains(checkString)){
+					
+					retString = "found";
+					break;
+				}
+			}
+		}
+		*/
+		
+		return checkString + " " + retString;
+	}
+	
+	/**
+    *
+	 *
+	 * 
+	 */	
+	
 }
