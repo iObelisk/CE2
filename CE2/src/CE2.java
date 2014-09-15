@@ -422,7 +422,14 @@ public class CE2
 	
 	public static String sortContents(List<String>datas){
 	
-		return null;
+		String returnMSG = MSG_LIST_EMPTY;
+		
+		if(datas == null || datas.isEmpty())
+		{
+			return returnMSG;
+		}
+		
+		return returnMSG;
 	}
 	/**
     *
