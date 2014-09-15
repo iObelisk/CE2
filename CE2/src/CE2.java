@@ -373,26 +373,7 @@ public class CE2
 		
 		String retString = "not found";
 		
-		//List<String> datas = getFileData();
-		
-		/*
-		//Display current data(s) in file.
-		if(datas.isEmpty())
-		{
-			retString = "not found";
-		}
-		else
-		{
-			for (String data:datas)
-			{
-				if(data.contains(checkString)){
-					
-					retString = "found";
-					break;
-				}
-			}
-		}
-		*/
+
 		
 		return checkString + " " + retString;
 	}
