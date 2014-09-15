@@ -27,8 +27,14 @@ public class CE2_Test {
 
 		
 		/********** Test cases for sortContents Function *****************/
-		testSortContents("TestSortContains","Display List is empty", datas);		
+		testSortContents("TestSortContains","Display List is empty", datas);
 		
+		datas.add("d");
+		datas.add("e");
+		datas.add("f");
+		datas.add("g");
+		datas.add("a");
+		testSortContents("TestSortContains","Display List is sorted", datas);			
 	}
 
 	public void testCheckContains(String description, String expected, 
