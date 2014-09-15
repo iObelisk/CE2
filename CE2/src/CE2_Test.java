@@ -1,12 +1,14 @@
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.junit.Test;
 
 public class CE2_Test {
 	
+
 	@Test
 	public void testExecuteCommand() throws IOException{
 		
@@ -14,7 +16,9 @@ public class CE2_Test {
 		
 		testCheckContains("checkContains","Input string is empty","", datas);
 		
-		//testCheckContains("checkContains","\"CE2\" not found","CE2",datas);
+		datas = new LinkedList<String>();
+		datas.add("TestCase1");
+		testCheckContains("checkContains","\"CE2\" not found","CE2",datas);
 		//testCheckContains("checkContains","\"test2\" word found","test2");
 		
 	}

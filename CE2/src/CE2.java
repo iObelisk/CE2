@@ -395,7 +395,7 @@ public class CE2
 			return MSG_EMPTY_STRING;
 		}
 		
-		writeToFile();
+		
 	
 		for(String data:datas){
 			if(data.contains(checkString)){
