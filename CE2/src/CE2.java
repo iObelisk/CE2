@@ -395,7 +395,10 @@ public class CE2
 			return MSG_EMPTY_STRING;
 		}
 		
-		
+		//If the buffer is not empty, push into the storage
+		if(fileWriter != null){
+			writeToFile();
+		}
 	
 		for(String data:datas){
 			if(data.contains(checkString)){
