@@ -46,7 +46,7 @@
  * @author Bay Chuan Wei Candiie
  */
 
-
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -69,6 +69,7 @@ public class CE2
 	private static final String CMD_CLEAR = "clear";
 	private static final String CMD_EXIT = "exit";
 	private static final String CMD_CHECK = "check";
+	private static final String CMD_SORT = "sort";
 	
 	private static final String MSG_EMPTY_FILE = "%s is empty";	
 	private static final String MSG_NO_CMD = "No such command \"%s\" " ;
@@ -204,6 +205,12 @@ public class CE2
 					}
 					
 					break;
+				
+				case CMD_SORT:
+					//List<String> datas = new LinkedList<String>();
+					
+					sortContents();
+					break;	
 					
 				default:					
 					if(!userCommand.equals(CMD_EXIT))
@@ -395,7 +402,7 @@ public class CE2
 			return MSG_EMPTY_STRING;
 		}
 		
-		//If the buffer is not empty, push into the storage
+		//If the buffer is not null or empty, push into the storage
 		if(fileWriter != null){
 			writeToFile();
 		}
@@ -411,6 +418,26 @@ public class CE2
 		return "\"" + checkString + "\"" + " " + retString;
 	}
 	
+	public static void sortContents(/*List<String>datas*/){
+		List<String> datas = new LinkedList<String>();
+		datas.add("a z");
+		datas.add("a t");
+		datas.add("a b");
+		datas.add("a a");
+		
+		for(String data:datas)
+		{
+			System.out.println(data);
+		}
+		
+		Collections.sort(datas);
+	
+		for(String data:datas)
+		{
+			System.out.println(data);
+		}
+		
+	}
 	/**
     *
 	 *

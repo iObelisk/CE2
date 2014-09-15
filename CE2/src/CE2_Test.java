@@ -1,8 +1,10 @@
 import static org.junit.Assert.assertEquals;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 import org.junit.Test;
 
@@ -20,6 +22,7 @@ public class CE2_Test {
 		datas.add("TestCase1");
 		testCheckContains("checkContains","\"CE2\" not found","CE2",datas);
 		testCheckContains("checkContains","\"TestCase1\" word found","TestCase1",datas);
+		
 		
 	}
 
